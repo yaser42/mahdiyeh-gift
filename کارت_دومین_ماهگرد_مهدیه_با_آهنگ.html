@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>برای تو 💙</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 20% 10%,#304f7d,#0a172b 65%);display:flex;justify-content:center;align-items:center;padding:20px;font-family:Tahoma,Arial;color:#fff}
+.card{width:min(440px,94vw);background:#081529eF;border:1px solid #d7b86b66;border-radius:26px;padding:14px;box-shadow:0 28px 80px #0008}
+.cover{height:590px;border-radius:19px;background:linear-gradient(145deg,#1d3b66,#09182e);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:28px;position:relative;overflow:hidden}
+.cover:before,.cover:after{content:"";position:absolute;border:1px solid #d8b96755;border-radius:50%;width:310px;height:310px}
+.cover:after{width:240px;height:240px}
+.envelope{font-size:74px;filter:drop-shadow(0 8px 16px #0008);margin-bottom:20px}
+.small{color:#d9bd78;font-size:13px;letter-spacing:2px}
+h1{font-size:25px;margin:13px 0;color:#fff}
+.hint{color:#cbd6e6;font-size:14px;line-height:2}
+.btn{border:0;border-radius:30px;background:linear-gradient(135deg,#e2c276,#a9782d);color:#172944;padding:13px 28px;font-weight:bold;cursor:pointer;margin-top:25px;font-size:15px;position:relative;z-index:2}
+.content{display:none;text-align:center;padding:18px 9px 8px;animation:up .8s ease}
+.open .content{display:block}.open .cover{height:310px}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.msg{font-size:15px;line-height:2.25;color:#eee9de}
+.msg b{color:#e5c87b}.roses{font-size:32px;margin:2px 0 10px}
+.music{margin-top:18px;padding:13px;border:1px solid #ffffff18;border-radius:17px;background:#ffffff09}
+.play{border:1px solid #d9b86b;background:transparent;color:#f0d48d;border-radius:24px;padding:9px 22px;cursor:pointer}
+</style></head>
+<body><div class="card" id="card">
+<div class="cover">
+<div class="envelope">💌</div>
+<div class="small">یک هدیه کوچک برای تو</div>
+<h1>فقط وقتی آماده‌ای، بازش کن...</h1>
+<div class="hint">داخلش یک چیز کوچک هست که مخصوص تو آماده شده.</div>
+<button class="btn" onclick="openGift()">باز کردن هدیه ❤️</button>
+</div>
+<div class="content">
+<div class="roses">🌹🌹</div>
+<div class="msg">
+مهدیه‌ی عزیزم،<br>
+امشب دومین ماهگردمون رسیده؛
+دو ماه شاید زمان زیادی نباشه، اما برای من
+پر از لحظه‌ها و حس‌های قشنگی شده که دوست دارم ادامه پیدا کنن.<br><br>
+از اینکه وارد زندگی من شدی خوشحالم.
+امیدوارم هر ماه که می‌گذره، بیشتر همدیگه رو بشناسیم،
+آرامش بیشتری کنار هم داشته باشیم و برای ساختن
+یک آینده‌ی قشنگ، قدم‌های قشنگ‌تری برداریم.<br><br>
+<b>دومین ماهگردمون مبارک، مهدیه جان.</b><br>
+امیدوارم این فقط دومین ماه از یک قصه‌ی طولانی و دوست‌داشتنی باشه. ❤️
+</div>
+<div class="music">🎵 <span>یک موسیقی کوچک برای این لحظه</span><br><br>
+<button class="play" id="play" onclick="toggleMusic()">▶ پخش موسیقی</button></div>
+<div style="margin-top:14px;color:#9eacc0;font-size:11px">M ❤️ یاسر</div>
+</div></div>
+<audio id="song" preload="auto" src="Dordaneh.mp3"></audio>
+<script>
+function openGift(){document.getElementById('card').classList.add('open');document.getElementById('song').play().catch(()=>{})}
+function toggleMusic(){let a=document.getElementById('song'),b=document.getElementById('play');if(a.paused){a.play();b.textContent='Ⅱ توقف موسیقی'}else{a.pause();b.textContent='▶ پخش موسیقی'}}
+</script></body></html>
